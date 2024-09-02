@@ -1,0 +1,9 @@
+    # Step 4: Swap the development slot with production
+    - task: AzureAppServiceManage@0
+      inputs:
+        azureSubscription: 'myconnection'
+        Action: 'Swap Slots'
+        WebAppName: 'nevotekapp'
+        ResourceGroupName: 'myResourceGroup'
+        SourceSlot: 'development'
+      displayName: 'Swap Deployment Slots'
